@@ -1,0 +1,14 @@
+venv
+.env
+.env.*
+!.env.example
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+test_*.py
+.git
+.gitignore
+.idea
+.vscode
+uploads

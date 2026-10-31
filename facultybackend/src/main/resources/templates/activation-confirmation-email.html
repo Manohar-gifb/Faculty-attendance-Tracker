@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Activated - Faculty Sync Tracker</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f0f2f5; font-family: 'Segoe UI', Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased;">
+
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #f0f2f5;">
+        <tr>
+            <td align="center" style="padding: 40px 20px;">
+
+                <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
+
+                    <!-- HEADER -->
+                    <tr>
+                        <td style="background: linear-gradient(135deg, #1a365d 0%, #2c5282 50%, #2b6cb0 100%); padding: 40px 48px; text-align: center;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" style="margin: 0 auto 16px;">
+                                <tr>
+                                    <td style="background-color: rgba(255,255,255,0.15); border-radius: 50%; width: 64px; height: 64px; text-align: center; vertical-align: middle; font-size: 28px;">
+                                        ✅
+                                    </td>
+                                </tr>
+                            </table>
+                            <h1 style="margin: 0 0 6px; font-size: 24px; font-weight: 700; color: #ffffff; letter-spacing: -0.3px;">
+                                Account Activated
+                            </h1>
+                            <p style="margin: 0; font-size: 13px; color: rgba(255,255,255,0.75); font-weight: 400; letter-spacing: 0.5px; text-transform: uppercase;">
+                                Faculty Sync Tracker
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- BODY -->
+                    <tr>
+                        <td style="padding: 36px 48px 0;">
+                            <p style="margin: 0 0 8px; font-size: 15px; color: #4a5568;">
+                                Dear <strong th:text="${firstName}" style="color: #1a365d;">User</strong>,
+                            </p>
+                            <p style="margin: 0 0 16px; font-size: 15px; color: #4a5568; line-height: 1.65;">
+                                Your password has been set and your account is now <strong>active</strong>. You can sign in
+                                to <strong>Faculty Sync Tracker</strong> using your registered email address.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- ACCOUNT DETAILS -->
+                    <tr>
+                        <td style="padding: 8px 48px 0;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #f7fafc; border: 1px solid #e2e8f0; border-radius: 10px;">
+                                <tr>
+                                    <td style="padding: 16px 20px; font-size: 13px; color: #718096;">Name</td>
+                                    <td style="padding: 16px 20px; font-size: 13px; color: #2d3748; font-weight: 600; text-align: right;" th:text="${fullName}">Name</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 16px 20px; font-size: 13px; color: #718096; border-top: 1px solid #e2e8f0;">Email</td>
+                                    <td style="padding: 16px 20px; font-size: 13px; color: #2d3748; font-weight: 600; text-align: right; border-top: 1px solid #e2e8f0;" th:text="${email}">email</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 16px 20px; font-size: 13px; color: #718096; border-top: 1px solid #e2e8f0;">Employee ID</td>
+                                    <td style="padding: 16px 20px; font-size: 13px; color: #2d3748; font-weight: 600; text-align: right; border-top: 1px solid #e2e8f0;" th:text="${employeeId}">ID</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 16px 20px; font-size: 13px; color: #718096; border-top: 1px solid #e2e8f0;">Role</td>
+                                    <td style="padding: 16px 20px; font-size: 13px; color: #2d3748; font-weight: 600; text-align: right; border-top: 1px solid #e2e8f0;" th:text="${role}">Role</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 16px 20px; font-size: 13px; color: #718096; border-top: 1px solid #e2e8f0;">Department</td>
+                                    <td style="padding: 16px 20px; font-size: 13px; color: #2d3748; font-weight: 600; text-align: right; border-top: 1px solid #e2e8f0;" th:text="${departmentName}">Department</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- BUTTON -->
+                    <tr>
+                        <td style="padding: 28px 48px 0; text-align: center;">
+                            <a th:href="${loginUrl}" style="display: inline-block; background: linear-gradient(135deg, #2c5282 0%, #2b6cb0 100%); color: #ffffff; text-decoration: none; padding: 14px 36px; border-radius: 8px; font-weight: 600; font-size: 15px;">
+                                Sign In Now
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!-- FOOTER -->
+                    <tr>
+                        <td style="padding: 28px 48px 40px;">
+                            <p style="margin: 0; font-size: 13px; color: #a0aec0; line-height: 1.6; text-align: center;">
+                                If you did not expect this email, please contact your administrator.
+                                <br>
+                                <span th:text="${senderName}">Faculty Sync Tracker</span>
+                            </p>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,1467 @@
+/* =========================================================
+   LEAVE BALANCE
+   ISOLATED CSS
+   Prefix: lb-
+========================================================= */
+
+
+/*
+   PAGE
+ */
+
+.lb-page {
+    width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+
+    padding: 28px 32px 40px;
+
+    font-family: "Poppins", sans-serif;
+
+    color: #172554;
+
+    background: transparent;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.lb-header {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 28px;
+}
+
+
+.lb-header-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.lb-sub-label {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.lb-admin-name {
+    margin: 0;
+    color: #3b82f6;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+
+/* =========================================================
+   APPLY BUTTON
+========================================================= */
+
+.lb-apply-button {
+    min-width: 125px;
+
+    height: 44px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #315fe9,
+            #6366f1
+        );
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14.5px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 18px
+        rgba(49, 95, 233, 0.18);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        opacity 0.25s ease;
+}
+
+
+.lb-apply-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 24px
+        rgba(49, 95, 233, 0.25);
+}
+
+
+.lb-apply-button:active {
+    transform: translateY(0);
+}
+
+
+.lb-apply-button:focus-visible {
+    outline: 3px solid
+        rgba(49, 95, 233, 0.2);
+
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.lb-main {
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.lb-summary {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================================================
+   SUMMARY CARD
+========================================================= */
+
+.lb-summary-card {
+    min-height: 88px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 17px 20px;
+
+    border:
+        1px solid
+        #e3e9f5;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f8faff
+        );
+
+    box-shadow:
+        0 7px 24px
+        rgba(49, 95, 233, 0.055);
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.lb-summary-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 11px 28px
+        rgba(49, 95, 233, 0.09);
+}
+
+
+/* =========================================================
+   SUMMARY ICON
+========================================================= */
+
+.lb-summary-icon {
+    width: 44px;
+
+    height: 44px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 13px;
+
+    font-size: 18px;
+}
+
+
+.lb-summary-approved {
+    background: #ecfdf5;
+
+    color: #16a34a;
+}
+
+
+.lb-summary-pending {
+    background: #fff7ed;
+
+    color: #ea580c;
+}
+
+
+.lb-summary-rejected {
+    background: #fff1f2;
+
+    color: #e11d48;
+}
+
+
+/* =========================================================
+   SUMMARY CONTENT
+========================================================= */
+
+.lb-summary-content {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.lb-summary-content span {
+    color: #64748b;
+
+    font-size: 13.5px;
+
+    font-weight: 500;
+}
+
+
+.lb-summary-content strong {
+    color: #172554;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    line-height: 1.1;
+}
+
+
+/* =========================================================
+   LEAVE BALANCE SECTION
+========================================================= */
+
+.lb-balance-section {
+    width: 100%;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.lb-section-title {
+    margin-bottom: 16px;
+}
+
+
+.lb-section-title h2 {
+    margin: 0;
+
+    color: #315fe9;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   CARD GRID
+========================================================= */
+
+.lb-type-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   LEAVE CARD
+========================================================= */
+
+.lb-card {
+    position: relative;
+
+    min-height: 245px;
+
+    overflow: hidden;
+
+    border: none;
+
+    border-radius: 18px;
+
+    box-sizing: border-box;
+
+    perspective: 1000px;
+
+    cursor: default;
+
+    isolation: isolate;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.lb-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 35px
+        rgba(15, 23, 42, 0.14);
+}
+
+
+/* =========================================================
+   CARD BORDER
+========================================================= */
+
+.lb-card-border {
+    position: absolute;
+
+    inset: 0;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.45);
+
+    border-radius: inherit;
+
+    pointer-events: none;
+
+    z-index: 4;
+
+    transition:
+        inset 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+.lb-card:hover .lb-card-border {
+    inset: 7px;
+
+    border-color:
+        rgba(255, 255, 255, 0.8);
+}
+
+
+/* =========================================================
+   CARD COLORS
+========================================================= */
+
+.lb-casual {
+    background:
+        linear-gradient(
+            135deg,
+            #315fe9 0%,
+            #4f7df3 55%,
+            #6d8ff5 100%
+        );
+
+    box-shadow:
+        0 10px 25px
+        rgba(49, 95, 233, 0.18);
+}
+
+
+.lb-sick {
+    background:
+        linear-gradient(
+            135deg,
+            #0f9f8f 0%,
+            #18b89f 55%,
+            #48c9b5 100%
+        );
+
+    box-shadow:
+        0 10px 25px
+        rgba(15, 159, 143, 0.18);
+}
+
+
+.lb-earned {
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed 0%,
+            #8b5cf6 55%,
+            #a78bfa 100%
+        );
+
+    box-shadow:
+        0 10px 25px
+        rgba(124, 58, 237, 0.18);
+}
+
+
+/* =========================================================
+   CARD FRONT
+========================================================= */
+
+.lb-card-front {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.4s ease;
+}
+
+
+.lb-card:hover .lb-card-front {
+    opacity: 0;
+
+    transform: scale(0.92);
+}
+
+
+/* =========================================================
+   SHORT NAME
+========================================================= */
+
+.lb-short-name {
+    width: 65px;
+
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.4);
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.16);
+
+    backdrop-filter: blur(8px);
+
+    -webkit-backdrop-filter: blur(8px);
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+
+.lb-front-name {
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+.lb-front-label {
+    margin-top: 17px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    opacity: 0.8;
+}
+
+
+.lb-front-count {
+    margin-top: 2px;
+
+    font-size: 38px;
+
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   HOVER CONTENT
+========================================================= */
+
+.lb-card-hover-content {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 3;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 28px;
+
+    color: #ffffff;
+
+    opacity: 0;
+
+    transform:
+        translateY(12px)
+        scale(0.97);
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.4s ease;
+}
+
+
+.lb-card:hover .lb-card-hover-content {
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* =========================================================
+   HOVER HEADING
+========================================================= */
+
+.lb-hover-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 22px;
+}
+
+
+.lb-hover-heading strong {
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.18);
+
+    font-size: 15px;
+}
+
+
+.lb-hover-heading span {
+    font-size: 15.5px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   USAGE GRID
+========================================================= */
+
+.lb-usage-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 8px;
+}
+
+
+.lb-usage-item {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 4px;
+
+    padding: 11px 5px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.18);
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.1);
+
+    backdrop-filter: blur(5px);
+
+    -webkit-backdrop-filter: blur(5px);
+}
+
+
+.lb-usage-item strong {
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+
+.lb-usage-item span {
+    font-size: 11px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.6px;
+
+    opacity: 0.8;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.lb-progress {
+    width: 100%;
+
+    height: 6px;
+
+    margin-top: 20px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.2);
+}
+
+
+.lb-progress-bar {
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: #ffffff;
+
+    transition:
+        width 0.6s ease;
+}
+
+
+.lb-used-text {
+    margin-top: 8px;
+
+    color:
+        rgba(255, 255, 255, 0.8);
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.lb-loading {
+    min-height: 120px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    color: #64748b;
+
+    font-size: 14.5px;
+}
+
+
+.lb-spinner {
+    width: 15px;
+
+    height: 15px;
+
+    display: inline-block;
+
+    border:
+        2px solid
+        #dbe4f5;
+
+    border-top-color:
+        #315fe9;
+
+    border-radius: 50%;
+
+    animation:
+        lb-spin 0.8s linear infinite;
+}
+
+
+@keyframes lb-spin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   HISTORY
+========================================================= */
+
+.lb-history {
+    width: 100%;
+
+    margin-top: 10px;
+}
+
+
+.lb-history-heading {
+    margin-bottom: 16px;
+}
+
+
+.lb-history-heading h2 {
+    margin: 0;
+
+    color: #172554;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   APPLICATION LIST
+========================================================= */
+
+.lb-application-list {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+/* =========================================================
+   APPLICATION
+========================================================= */
+
+.lb-application {
+    width: 100%;
+
+    min-height: 78px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 15px 18px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        #e4e9f2;
+
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 5px 18px
+        rgba(15, 23, 42, 0.035);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.lb-application:hover {
+    transform: translateY(-2px);
+
+    border-color: #d5def2;
+
+    box-shadow:
+        0 9px 22px
+        rgba(49, 95, 233, 0.07);
+}
+
+
+/* =========================================================
+   APPLICATION MAIN
+========================================================= */
+
+.lb-application-main {
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    flex: 1;
+}
+
+
+.lb-application-icon {
+    width: 40px;
+
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #eef2ff;
+
+    color: #315fe9;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   APPLICATION INFO
+========================================================= */
+
+.lb-application-info {
+    min-width: 0;
+
+    flex: 1;
+}
+
+
+.lb-application-title-row {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    flex-wrap: wrap;
+}
+
+
+.lb-application-title-row h3 {
+    margin: 0;
+
+    color: #172554;
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+
+.lb-application-info > p {
+    margin: 4px 0 6px;
+
+    overflow: hidden;
+
+    color: #64748b;
+
+    font-size: 13.5px;
+
+    font-weight: 400;
+
+    line-height: 1.5;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   APPLICATION DATE
+========================================================= */
+
+.lb-application-date {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: #8997ad;
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+.lb-application-date svg {
+    color: #315fe9;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.lb-application-status {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    padding: 4px 8px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.3px;
+}
+
+
+.lb-status-approved {
+    background: #ecfdf5;
+
+    color: #15803d;
+}
+
+
+.lb-status-rejected {
+    background: #fff1f2;
+
+    color: #be123c;
+}
+
+
+.lb-status-pending {
+    background: #fff7ed;
+
+    color: #c2410c;
+}
+
+
+/* =========================================================
+   APPLICATION DAYS
+========================================================= */
+
+.lb-application-days {
+    min-width: 55px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding-left: 15px;
+
+    border-left:
+        1px solid
+        #e9edf5;
+}
+
+
+.lb-application-days strong {
+    color: #315fe9;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+.lb-application-days span {
+    margin-top: 4px;
+
+    color: #8997ad;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.lb-empty {
+    min-height: 220px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    border:
+        1px dashed
+        #dce4f2;
+
+    border-radius: 16px;
+
+    background: #fafbfe;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+
+.lb-empty-icon {
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 12px;
+
+    border-radius: 14px;
+
+    background: #eef2ff;
+
+    color: #315fe9;
+
+    font-size: 20px;
+}
+
+
+.lb-empty h3 {
+    margin: 0;
+
+    color: #172554;
+
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+
+.lb-empty p {
+    margin: 6px 0 16px;
+
+    color: #8997ad;
+
+    font-size: 14.5px;
+}
+
+
+.lb-empty button {
+    height: 38px;
+
+    padding: 0 16px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #315fe9;
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14.5px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.lb-empty button:hover {
+    background: #264fc7;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.lb-apply-button:focus-visible,
+.lb-empty button:focus-visible {
+    outline: 3px solid
+        rgba(49, 95, 233, 0.22);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .lb-page {
+        padding: 24px 20px 35px;
+    }
+
+
+    .lb-summary {
+        gap: 14px;
+    }
+
+
+    .lb-type-grid {
+        gap: 14px;
+    }
+
+
+    .lb-card {
+        min-height: 230px;
+    }
+
+
+    .lb-card-hover-content {
+        padding: 22px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .lb-page {
+        padding: 20px 15px 30px;
+    }
+
+
+    .lb-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 14px;
+    }
+
+
+    .lb-header-title h1 {
+        font-size: 20px;
+    }
+
+
+    .lb-apply-button {
+        width: 100%;
+    }
+
+
+    .lb-summary {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+
+    .lb-summary-card {
+        min-height: 76px;
+
+        padding: 13px 15px;
+    }
+
+
+    .lb-summary-icon {
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 16px;
+    }
+
+
+    .lb-summary-content strong {
+        font-size: 20px;
+    }
+
+
+    .lb-type-grid {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+
+    .lb-card {
+        min-height: 225px;
+    }
+
+
+    .lb-history {
+        margin-top: 5px;
+    }
+
+
+    .lb-application {
+        align-items: flex-start;
+
+        padding: 13px;
+
+        gap: 10px;
+    }
+
+
+    .lb-application-main {
+        gap: 10px;
+    }
+
+
+    .lb-application-icon {
+        width: 36px;
+
+        height: 36px;
+
+        font-size: 14px;
+    }
+
+
+    .lb-application-title-row h3 {
+        font-size: 14px;
+    }
+
+
+    .lb-application-info > p {
+        max-width: 170px;
+    }
+
+
+    .lb-application-days {
+        min-width: 45px;
+
+        padding-left: 10px;
+    }
+
+
+    .lb-application-days strong {
+        font-size: 17px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .lb-page {
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+
+
+    .lb-header-title h1 {
+        font-size: 18px;
+    }
+
+
+    .lb-card {
+        min-height: 215px;
+    }
+
+
+    .lb-card-hover-content {
+        padding: 22px 18px;
+    }
+
+
+    .lb-usage-item {
+        padding: 9px 3px;
+    }
+
+
+    .lb-usage-item strong {
+        font-size: 16px;
+    }
+
+
+    .lb-application-info > p {
+        max-width: 125px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .lb-card,
+    .lb-card-front,
+    .lb-card-hover-content,
+    .lb-summary-card,
+    .lb-application,
+    .lb-apply-button,
+    .lb-empty button {
+        transition: none;
+    }
+
+
+    .lb-spinner {
+        animation: none;
+    }
+
+}

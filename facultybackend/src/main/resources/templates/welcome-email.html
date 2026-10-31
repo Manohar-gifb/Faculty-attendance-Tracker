@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6f9; margin: 0; padding: 20px; }
+        .container { max-width: 600px; margin: 0 auto; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .header { background: linear-gradient(135deg, #315fe9 0%, #4a7bf7 100%); color: white; padding: 30px; text-align: center; }
+        .header h1 { margin: 0; font-size: 24px; }
+        .header p { margin: 5px 0 0; opacity: 0.9; font-size: 14px; }
+        .content { padding: 30px; }
+        .welcome-msg { font-size: 15px; color: #333; line-height: 1.6; }
+        .credentials-box { background: #f0f4ff; border: 1px solid #d4ddf5; border-radius: 10px; padding: 20px; margin: 20px 0; }
+        .credentials-box h3 { margin: 0 0 15px; color: #315fe9; font-size: 16px; }
+        .credential-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #e5eaf2; }
+        .credential-row:last-child { border-bottom: none; }
+        .credential-label { font-weight: 600; color: #555; font-size: 13px; }
+        .credential-value { color: #172033; font-size: 13px; font-weight: 500; }
+        .password-highlight { background: #fff3cd; padding: 3px 8px; border-radius: 4px; font-family: 'Courier New', monospace; font-weight: 700; color: #856404; letter-spacing: 1px; }
+        .info-box { background: #e8f5e9; border-left: 4px solid #4caf50; padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        .info-box p { margin: 0; color: #2e7d32; font-size: 13px; }
+        .warning-box { background: #fff8e1; border-left: 4px solid #ff9800; padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        .warning-box p { margin: 0; color: #e65100; font-size: 13px; }
+        .cta-section { text-align: center; padding: 20px 0; }
+        .cta-button { display: inline-block; padding: 14px 40px; background: #315fe9; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 15px; transition: transform 0.2s; }
+        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(49, 95, 233, 0.3); }
+        .footer { background: #f8f9fa; padding: 20px; text-align: center; font-size: 12px; color: #888; }
+        .footer a { color: #315fe9; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🎓 Faculty Sync Tracker</h1>
+            <p>Institutional Attendance &amp; Leave Portal</p>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <p class="welcome-msg">
+                Hello <strong th:text="${firstName}">Faculty</strong>,
+            </p>
+            <p class="welcome-msg">
+                Your account has been successfully created! You can now log in to
+                <strong>Faculty Sync Tracker</strong> using the credentials below.
+            </p>
+
+            <!-- Credentials Box -->
+            <div class="credentials-box">
+                <h3>🔑 Your Login Credentials</h3>
+                <div class="credential-row">
+                    <span class="credential-label">Full Name</span>
+                    <span class="credential-value" th:text="${fullName}">John Doe</span>
+                </div>
+                <div class="credential-row">
+                    <span class="credential-label">Email</span>
+                    <span class="credential-value" th:text="${email}">john@college.edu</span>
+                </div>
+                <div class="credential-row">
+                    <span class="credential-label">Password</span>
+                    <span class="credential-value">
+                        <span class="password-highlight" th:text="${password}">Temp@123</span>
+                    </span>
+                </div>
+                <div class="credential-row">
+                    <span class="credential-label">Employee ID</span>
+                    <span class="credential-value" th:text="${employeeId}">FAC001</span>
+                </div>
+                <div class="credential-row">
+                    <span class="credential-label">Role</span>
+                    <span class="credential-value" th:text="${role}">Assistant Professor</span>
+                </div>
+                <div class="credential-row">
+                    <span class="credential-label">Department</span>
+                    <span class="credential-value" th:text="${departmentName}">Computer Science</span>
+                </div>
+            </div>
+
+            <!-- Info Box -->
+            <div class="info-box">
+                <p>✅ You can mark your daily attendance, apply for leaves, and view your attendance history through the system.</p>
+            </div>
+
+            <!-- Warning Box -->
+            <div class="warning-box">
+                <p>⚠️ <strong>Important:</strong> For security reasons, you will be asked to change your password on your first login. Please use a strong password.</p>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="cta-section">
+                <a th:href="${loginUrl}" class="cta-button">🚀 Login to Your Account</a>
+            </div>
+
+            <div style="background: #e8f4fd; border: 1px solid #b3d9f2; border-radius: 8px; padding: 15px; margin: 20px 0; text-align: center;">
+                <p style="margin: 0 0 8px; font-size: 13px; color: #0277bd;">
+                    <strong>🌐 Visit our website:</strong>
+                </p>
+                <a th:href="${websiteUrl}" style="color: #0277bd; font-size: 15px; font-weight: 600; text-decoration: none;" th:text="${websiteUrl}">https://faculty-attendance-frontend-seven.vercel.app</a>
+            </div>
+
+            <p style="font-size: 13px; color: #666; text-align: center; margin-top: 10px;">
+                If you have any questions, please contact your department HOD or the administrator.
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p><strong th:text="${senderName}">Faculty Sync Tracker</strong></p>
+            <p>This is an automated email. Please do not reply.</p>
+            <p>© 2026 Faculty Sync Tracker. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
